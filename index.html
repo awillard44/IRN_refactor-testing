@@ -537,295 +537,268 @@
         };
 
         // ============================================================
-        // COALITION MEMBER LIST - Updated from vouchershurtohio.com/districts/
-        // Last updated: April 2026
-        // Excludes JVSDs, ESCs, and Career Centers (not in GeoJSON)
-        // Match uses partial string matching (case-insensitive)
+        // COALITION MEMBER IRN LIST
         // ============================================================
-        const coalitionMembers = new Set([
-            'ADA EXEMPTED',
-            'ADENA LOCAL',
-            'AKRON',
-            'ALEXANDER LOCAL',
-            'ALLIANCE CITY',
-            'AMANDA-CLEARCREEK',
-            'AMHERST EXEMPTED',
-            'ANSONIA LOCAL',
-            'ATHENS CITY',
-            'AURORA CITY',
-            'AYERSVILLE LOCAL',
-            'BARBERTON CITY',
-            'BARNESVILLE EXEMPTED',
-            'BEAVER LOCAL',
-            'BEDFORD CITY',
-            'BELLAIRE LOCAL',
-            'BELLEVUE CITY',
-            'BELPRE CITY',
-            'BEREA CITY',
-            'BERNE UNION',
-            'BERKSHIRE LOCAL',
-            'BEXLEY CITY',
-            'BLOOM VERNON',
-            'BLOOMFIELD MESPO',
-            'BLUFFTON EXEMPTED',
-            'BOARDMAN LOCAL',
-            'BOWLING GREEN CITY',
-            'BRECKSVILLE-BROADVIEW',
-            'BRIDGEPORT EXEMPTED',
-            'BRIGHT LOCAL',
-            'BRISTOL LOCAL',
-            'BROWN LOCAL',
-            'BUCKEYE CENTRAL',
-            'BUCYRUS CITY',
-            'CANAL WINCHESTER',
-            'CALDWELL EXEMPTED',
-            'CANFIELD LOCAL',
-            'CANTON CITY',
-            'CANTON LOCAL',
-            'CARDINAL LOCAL',
-            'CARDINGTON-LINCOLN',
-            'CARLISLE LOCAL',
-            'CARROLLTON EXEMPTED',
-            'CELINA CITY',
-            'CENTERBURG LOCAL',
-            'CENTERVILLE CITY',
-            'CHARDON LOCAL',
-            'CHESAPEAKE UNION',
-            'CINCINNATI',
-            'CIRCLEVILLE CITY',
-            'CLAY LOCAL',
-            'CLEARFORK VALLEY',
-            'CLERMONT NORTHEASTERN',
-            'CLEVELAND HEIGHTS',
-            'CLINTON-MASSIE',
-            'CLOVERLEAF LOCAL',
-            'COLUMBIA LOCAL',
-            'COLUMBIANA EXEMPTED',
-            'COLUMBUS CITY',
-            'CONOTTON VALLEY',
-            'COSHOCTON CITY',
-            'CRESTVIEW LOCAL',
-            'CROOKSVILLE EXEMPTED',
-            'CUYAHOGA HEIGHTS',
-            'CUYAHOGA FALLS',
-            'DANBURY LOCAL',
-            'DAWSON BRYANT',
-            'DAYTON',
-            'DEER PARK',
-            'EAST CLINTON',
-            'EAST GUERNSEY',
-            'EAST KNOX',
-            'EAST MUSKINGUM',
-            'EASTERN LOCAL',
-            'EDISON LOCAL',
-            'ELIDA LOCAL',
-            'ELYRIA CITY',
-            'EVERGREEN LOCAL',
-            'FAIRBORN CITY',
-            'FAIRLAND LOCAL',
-            'FAIRLESS LOCAL',
-            'FAIRVIEW PARK',
-            'FAYETTEVILLE-PERRY',
-            'FEDERAL HOCKING',
-            'FINNEYTOWN LOCAL',
-            'FIRELANDS LOCAL',
-            'FOREST HILLS',
-            'FORT FRYE',
-            'FOSTORIA CITY',
-            'FRANKLIN CITY',
-            'FRANKLIN LOCAL',
-            'GAHANNA-JEFFERSON',
-            'GALLIPOLIS CITY',
-            'GENEVA AREA',
-            'GENOA AREA',
-            'GEORGETOWN EXEMPTED',
-            'GIRARD CITY',
-            'GOSHEN LOCAL',
-            'GREEN LOCAL',
-            'GREENFIELD EXEMPTED',
-            'GREENVILLE CITY',
-            'GROVEPORT MADISON',
-            'HAMILTON CITY',
-            'HARDIN-HOUSTON',
-            'HARDIN NORTHERN',
-            'HARRISON HILLS',
-            'HEATH CITY',
-            'HICKSVILLE EXEMPTED',
-            'HILLSDALE',
-            'HOWLAND LOCAL',
-            'HUBBARD EXEMPTED',
-            'HUDSON CITY',
-            'HUNTINGTON LOCAL',
-            'INDEPENDENCE LOCAL',
-            'INDIAN CREEK',
-            'IRONTON CITY',
-            'JACKSON CITY',
-            'JACKSON MILTON',
-            'JAMES A. GARFIELD',
-            'JEFFERSON TOWNSHIP',
-            'JENNINGS LOCAL',
-            'JONATHAN ALDER',
-            'JOSEPH BADGER',
-            'KALIDA LOCAL',
-            'KENTON CITY',
-            'LABRAE LOCAL',
-            'LAKE LOCAL',
-            'LAKEVIEW LOCAL',
-            'LAKEWOOD LOCAL',
-            'LAKOTA LOCAL',
-            'LANCASTER CITY',
-            'LEETONIA EXEMPTED',
-            'LIBERTY LOCAL',
-            'LIBERTY UNION',
-            'LICKING HEIGHTS',
-            'LICKING VALLEY',
-            'LIMA CITY',
-            'LINCOLNVIEW LOCAL',
-            'LISBON EXEMPTED',
-            'LOCKLAND CITY',
-            'LOGAN HOCKING',
-            'LONDON CITY',
-            'LORAIN CITY',
-            'LORDSTOWN LOCAL',
-            'LOUDONVILLE-PERRYSVILLE',
-            'LUCAS LOCAL',
-            'MADISON LOCAL',
-            'MARIETTA CITY',
-            'MARLINGTON LOCAL',
-            'MARION LOCAL',
-            'MARGARETTA LOCAL',
-            'MATHEWS LOCAL',
-            'MAYFIELD CITY',
-            'MAYSVILLE LOCAL',
-            'MEDINA CITY',
-            'MIDDLETOWN CITY',
-            'MILLCREEK WEST UNITY',
-            'MILLER CITY-NEW CLEVELAND',
-            'MINERVA LOCAL',
-            'MISSISSINAWA VALLEY',
-            'MOHAWK LOCAL',
-            'MORGAN LOCAL',
-            'MT. HEALTHY',
-            'NELSONVILLE YORK',
-            'NEW BOSTON',
-            'NEW LEXINGTON',
-            'NEW PHILADELPHIA',
-            'NEWCOMERSTOWN EXEMPTED',
-            'NEWTON FALLS',
-            'NILES CITY',
-            'NOBLE LOCAL',
-            'NORDONIA HILLS',
-            'NORTH CANTON',
-            'NORTH COLLEGE HILL',
-            'NORTHERN LOCAL',
-            'NORTHMONT CITY',
-            'NORTHRIDGE LOCAL',
-            'NORTHWEST LOCAL',
-            'NORTON CITY',
-            'NORWALK CITY',
-            'NORWOOD CITY',
-            'OAK HILL UNION',
-            'OBERLIN CITY',
-            'OLMSTED FALLS',
-            'OSNABURG LOCAL',
-            'OTTAWA-GLANDORF',
-            'PAINT VALLEY',
-            'PANDORA-GILBOA',
-            'PATRICK HENRY',
-            'PIQUA CITY',
-            'PLAIN LOCAL',
-            'PLEASANT LOCAL',
-            'POLAND LOCAL',
-            'PORTSMOUTH CITY',
-            'PREBLE SHAWNEE',
-            'PRINCETON CITY',
-            'REYNOLDSBURG CITY',
-            'RICHMOND HEIGHTS',
-            'RIDGEDALE LOCAL',
-            'RIDGEMONT LOCAL',
-            'RIDGEWOOD LOCAL',
-            'RIPLEY UNION',
-            'RIVERDALE LOCAL',
-            'RIVERVIEW LOCAL',
-            'ROLLING HILLS',
-            'SALEM CITY',
-            'SANDY VALLEY',
-            'SCIOTO VALLEY',
-            'SEBRING LOCAL',
-            'SENECA EAST',
-            'SANDUSKY CITY',
-            'SHADYSIDE LOCAL',
-            'SHAKER HEIGHTS',
-            'SHEFFIELD-SHEFFIELD LAKE',
-            'SHELBY CITY',
-            'SIDNEY CITY',
-            'SOUTH CENTRAL LOCAL',
-            'SOUTH RANGE',
-            'SOUTHERN LOCAL',
-            'SOUTHPOINT LOCAL',
-            'SOUTHWEST LICKING',
-            'SOUTHWESTERN CITY',
-            'SPENCERVILLE LOCAL',
-            'SPRINGFIELD LOCAL',
-            'SPRINGFIELD CITY',
-            'ST. BERNARD-ELMWOOD',
-            'ST. CLAIRSVILLE-RICHLAND',
-            'STEUBENVILLE CITY',
-            'STRASBURG-FRANKLIN',
-            'STRUTHERS CITY',
-            'SWANTON LOCAL',
-            'SYLVANIA',
-            'SYMMES VALLEY',
-            'TALAWANDA CITY',
-            'TOLEDO',
-            'TORONTO CITY',
-            'TRIMBLE LOCAL',
-            'TRI-VALLEY LOCAL',
-            'TROTWOOD-MADISON',
-            'TUSCARAWAS VALLEY',
-            'TWINSBURG CITY',
-            'UNION LOCAL',
-            'UNION-SCIOTO',
-            'UNITED LOCAL',
-            'UPPER ARLINGTON',
-            'UPPER SCIOTO VALLEY',
-            'VAN BUREN LOCAL',
-            'VERMILION LOCAL',
-            'VINTON COUNTY',
-            'WALNUT TOWNSHIP',
-            'WARREN LOCAL',
-            'WARRENSVILLE HEIGHTS',
-            'WASHINGTON LOCAL',
-            'WASHINGTON-NILE',
-            'WAUSEON EXEMPTED',
-            'WAVERLY CITY',
-            'WAYNE TRACE',
-            'WAYNESFIELD GOSHEN',
-            'WELLINGTON EXEMPTED',
-            'WELLSTON CITY',
-            'WELLSVILLE LOCAL',
-            'WEST BRANCH',
-            'WEST CLERMONT',
-            'WEST GEAUGA',
-            'WEST MUSKINGUM',
-            'WESTERN BROWN',
-            'WESTERN LOCAL',
-            'WESTERVILLE CITY',
-            'WHEELERSBURG LOCAL',
-            'WICKLIFFE CITY',
-            'WINDHAM EXEMPTED',
-            'WINTON WOODS',
-            'WOLF CREEK',
-            'WOODMORE LOCAL',
-            'WOODRIDGE LOCAL',
-            'WOOSTER CITY',
-            'WORTHINGTON',
-            'WYOMING CITY',
-            'XENIA COMMUNITY',
-            'YELLOW SPRINGS',
-            'YOUNGSTOWN CITY',
-            'ZANESVILLE CITY',
-            'ZANE TRACE'
+        // Refactored to use IRNs instead of partial district-name matching.
+        // Source files used:
+        //   - districts_IRN-districtName-countyCode.txt
+        //   - VHO_member-list.txt
+        //
+        // These source lists still contain a few ambiguous duplicate district names
+        // that cannot be resolved confidently without a county or exact IRN:
+        //   - Green Local School District
+        //   - Lakota Local School District
+        //   - Northridge Local School District
+        //   - Springfield Local Schools
+        //
+        // Those four were intentionally left out of the set below so the map does
+        // not falsely mark the wrong district. Once you confirm the correct IRNs,
+        // just add them to coalitionMemberIRNs.
+        // Also excluded because they are not regular school districts in the GeoJSON:
+        //   - Buckeye Career Center
+        //   - Jefferson County Vocational School
+        //   - Ross-Pike Educational Service District
+        // ============================================================
+
+        const coalitionMemberIRNs = new Set([
+            '045187', // ADA EX VILL SCHOOL DISTRICT
+            '049494', // ADENA LOCAL SCHOOL DISTRICT
+            '043489', // AKRON CITY SCHOOL DISTRICT
+            '045906', // ALEXANDER LOCAL SCHOOL DISTRICT
+            '043497', // ALLIANCE CITY SCHOOL DISTRICT
+            '046847', // AMANDA-CLEARCREEK LOCAL SCHOOL DISTRICT
+            '045195', // AMHERST EX VILL SCHOOL DISTRICT
+            '046623', // ANSONIA LOCAL SCHOOL DISTRICT
+            '049171', // AURORA CITY SCHOOL DISTRICT
+            '043521', // ATHENS CITY SCHOOL DISTRICT
+            '046706', // AYERSVILLE LOCAL SCHOOL DISTRICT
+            '043539', // BARBERTON CITY SCHOOL DISTRICT
+            '045203', // BARNESVILLE EX VILL SCHOOL DISTRICT
+            '046425', // BEAVER LOCAL SCHOOL DISTRICT
+            '043562', // BEDFORD CITY SCHOOL DISTRICT
+            '043570', // BELLAIRE CITY SCHOOL DISTRICT
+            '043596', // BELLEVUE CITY SCHOOL DISTRICT
+            '043604', // BELPRE CITY SCHOOL DISTRICT
+            '043612', // BEREA CITY SCHOOL DISTRICT
+            '046854', // BERNE UNION LOCAL SCHOOL DISTRICT
+            '047167', // BERKSHIRE LOCAL SCHOOL DISTRICT
+            '043620', // BEXLEY CITY SCHOOL DISTRICT
+            '045211', // BLUFFTON EX VILL SCHOOL DISTRICT
+            '049593', // BLOOM-VERNON LOCAL SCHOOL DISTRICT
+            '050096', // BLOOMFIELD-MESPO LOCAL SCHOOL DISTRICT
+            '048306', // BOARDMAN LOCAL SCHOOL DISTRICT
+            '043638', // BOWLING GREEN CITY SCHOOL DISTRICT
+            '047613', // BRIGHT LOCAL SCHOOL DISTRICT
+            '045237', // BRIDGEPORT EX VILL SCHOOL DISTRICT
+            '050112', // BRISTOL LOCAL SCHOOL DISTRICT
+            '046177', // BROWN LOCAL SCHOOL DISTRICT
+            '043687', // BUCYRUS CITY SCHOOL DISTRICT
+            '046508', // BUCKEYE CENTRAL LOCAL SCHOOL DISTRICT
+            '045252', // CALDWELL EX VILL SCHOOL DISTRICT
+            '046946', // CANAL WINCHESTER LOCAL SCHOOL DISTRICT
+            '048314', // CANFIELD LOCAL SCHOOL DISTRICT
+            '043711', // CANTON CITY SCHOOL DISTRICT
+            '049833', // CANTON LOCAL SCHOOL DISTRICT
+            '047175', // CARDINAL LOCAL SCHOOL DISTRICT
+            '048793', // CARDINGTON-LINCOLN LOCAL SCHOOL DISTRICT
+            '050419', // CARLISLE LOCAL SCHOOL DISTRICT
+            '045278', // CARROLLTON EX VILL SCHOOL DISTRICT
+            '043729', // CELINA CITY SCHOOL DISTRICT
+            '043737', // CENTERVILLE CITY SCHOOL DISTRICT
+            '047829', // CENTERBURG LOCAL SCHOOL DISTRICT
+            '047183', // CHARDON LOCAL SCHOOL DISTRICT
+            '045294', // CHESAPEAKE UNION EX VILL SCHOOL DISTRICT
+            '043752', // CINCINNATI CITY SCHOOL DISTRICT
+            '043760', // CIRCLEVILLE CITY SCHOOL DISTRICT
+            '049601', // CLAY LOCAL SCHOOL DISTRICT
+            '046391', // CLINTON-MASSIE LOCAL SCHOOL DISTRICT
+            '046326', // CLERMONT-NORTHEASTERN LOCAL SCHOOL DISTRICT
+            '048488', // CLOVERLEAF LOCAL SCHOOL DISTRICT
+            '045328', // COLUMBIANA EX VILL SCHOOL DISTRICT
+            '048140', // COLUMBIA LOCAL SCHOOL DISTRICT
+            '043802', // COLUMBUS CITY SCHOOL DISTRICT
+            '047548', // CONOTTON VALLEY UNION LOCAL SCHOOL DISTRICT
+            '043828', // COSHOCTON CITY SCHOOL DISTRICT
+            '045351', // CROOKSVILLE EX VILL SCHOOL DISTRICT
+            '046557', // CUYAHOGA HEIGHTS LOCAL SCHOOL DISTRICT
+            '043836', // CUYAHOGA FALLS CITY SCHOOL DISTRICT
+            '047928', // DAWSON-BRYANT LOCAL SCHOOL DISTRICT
+            '048934', // DANBURY LOCAL SCHOOL DISTRICT
+            '043844', // DAYTON CITY SCHOOL DISTRICT
+            '043851', // DEER PARK COMMUNITY CITY SCHOOL DISTRICT
+            '047795', // EDISON LOCAL SCHOOL DISTRICT
+            '045773', // ELIDA LOCAL SCHOOL DISTRICT
+            '043943', // ELYRIA CITY SCHOOL DISTRICT
+            '047050', // EVERGREEN LOCAL SCHOOL DISTRICT
+            '046409', // EAST CLINTON LOCAL SCHOOL DISTRICT
+            '049130', // SCIOTO VALLEY LOCAL SCHOOL DISTRICT
+            '069682', // EAST GUERNSEY LOCAL SCHOOL DISTRICT
+            '047845', // EAST KNOX LOCAL SCHOOL DISTRICT
+            '048835', // EAST MUSKINGUM LOCAL SCHOOL DISTRICT
+            '046037', // EASTERN LOCAL SCHOOL DISTRICT - BROWN
+            '048512', // EASTERN LOCAL SCHOOL DISTRICT - MEIGS
+            '046045', // FAYETTEVILLE-PERRY LOCAL SCHOOL DISTRICT
+            '045914', // FEDERAL HOCKING LOCAL SCHOOL DISTRICT
+            '047332', // FINNEYTOWN LOCAL SCHOOL DISTRICT
+            '048157', // FIRELANDS LOCAL SCHOOL DISTRICT
+            '047340', // FOREST HILLS LOCAL SCHOOL DISTRICT
+            '050484', // FORT FRYE LOCAL SCHOOL DISTRICT
+            '043992', // FOSTORIA CITY SCHOOL DISTRICT
+            '044008', // FRANKLIN CITY SCHOOL DISTRICT
+            '048843', // FRANKLIN LOCAL SCHOOL DISTRICT
+            '046961', // GAHANNA-JEFFERSON CITY SCHOOL DISTRICT
+            '044032', // GALLIPOLIS CITY SCHOOL DISTRICT
+            '044057', // GENEVA AREA CITY SCHOOL DISTRICT
+            '044065', // GIRARD CITY SCHOOL DISTRICT
+            '046342', // GOSHEN LOCAL SCHOOL DISTRICT
+            '044099', // GREENVILLE CITY SCHOOL DISTRICT
+            '045401', // GREENFIELD EX VILL SCHOOL DISTRICT
+            '046979', // GROVEPORT MADISON LOCAL SCHOOL DISTRICT
+            '044107', // HAMILTON CITY SCHOOL DISTRICT
+            '049791', // HARDIN-HOUSTON LOCAL SCHOOL DISTRICT
+            '047498', // HARDIN NORTHERN LOCAL SCHOOL DISTRICT
+            '045245', // HARRISON HILLS CITY SCHOOL DISTRICT
+            '044115', // HEATH CITY SCHOOL DISTRICT
+            '045419', // HICKSVILLE EX VILL SCHOOL DISTRICT
+            '045823', // HILLSDALE LOCAL SCHOOL DISTRICT
+            '050161', // HOWLAND LOCAL SCHOOL DISTRICT
+            '050021', // HUDSON CITY SCHOOL DISTRICT
+            '045427', // HUBBARD EX VILL SCHOOL DISTRICT
+            '049502', // HUNTINGTON LOCAL SCHOOL DISTRICT
+            '044149', // IRONTON CITY SCHOOL DISTRICT
+            '044156', // JACKSON CITY SCHOOL DISTRICT
+            '048322', // JACKSON-MILTON LOCAL SCHOOL DISTRICT
+            '049205', // JAMES A GARFIELD LOCAL SCHOOL DISTRICT
+            '048264', // JONATHAN ALDER LOCAL SCHOOL DISTRICT
+            '049338', // JENNINGS LOCAL SCHOOL DISTRICT
+            '050179', // JOSEPH BADGER LOCAL SCHOOL DISTRICT
+            '049346', // KALIDA LOCAL SCHOOL DISTRICT
+            '044172', // KENTON CITY SCHOOL DISTRICT
+            '044206', // LANCASTER CITY SCHOOL DISTRICT
+            '049866', // LAKE LOCAL SCHOOL DISTRICT - STARK
+            '050690', // LAKE LOCAL SCHOOL DISTRICT - WOOD
+            '047993', // LAKEWOOD LOCAL SCHOOL DISTRICT
+            '045443', // LEETONIA EX VILL SCHOOL DISTRICT
+            '048009', // LICKING HEIGHTS LOCAL SCHOOL DISTRICT
+            '048017', // LICKING VALLEY LOCAL SCHOOL DISTRICT
+            '044222', // LIMA CITY SCHOOL DISTRICT
+            '050369', // LINCOLNVIEW LOCAL SCHOOL DISTRICT
+            '045450', // LISBON EX VILL SCHOOL DISTRICT
+            '044230', // LOCKLAND CITY SCHOOL DISTRICT
+            '044248', // LOGAN-HOCKING LOCAL SCHOOL DISTRICT
+            '044255', // LONDON CITY SCHOOL DISTRICT
+            '044263', // LORAIN CITY SCHOOL DISTRICT
+            '050203', // LORDSTOWN LOCAL SCHOOL DISTRICT
+            '045468', // LOUDONVILLE-PERRYSVILLE EX VILL SCHOOL DISTRICT
+            '049445', // LUCAS LOCAL SCHOOL DISTRICT
+            '044321', // MARIETTA CITY SCHOOL DISTRICT
+            '048553', // MARION LOCAL SCHOOL DISTRICT
+            '049452', // MADISON LOCAL SCHOOL DISTRICT - RICHLAND
+            '044370', // MAYFIELD CITY SCHOOL DISTRICT
+            '048850', // MAYSVILLE LOCAL SCHOOL DISTRICT
+            '044388', // MEDINA CITY SCHOOL DISTRICT
+            '049361', // MILLER CITY-NEW CLEVELAND LOCAL SCHOOL DISTRICT
+            '050633', // MILLCREEK-WEST UNITY LOCAL SCHOOL DISTRICT
+            '049890', // MINERVA LOCAL SCHOOL DISTRICT
+            '044404', // MIDDLETOWN CITY SCHOOL DISTRICT
+            '046672', // MISSISSINAWA VALLEY LOCAL SCHOOL DISTRICT
+            '050740', // MOHAWK LOCAL SCHOOL DISTRICT
+            '048777', // MORGAN LOCAL SCHOOL DISTRICT
+            '044412', // MOUNT HEALTHY CITY SCHOOL DISTRICT
+            '044446', // NELSONVILLE-YORK CITY SCHOOL DISTRICT
+            '044461', // NEW BOSTON LOCAL SCHOOL DISTRICT
+            '044479', // NEW LEXINGTON CITY SCHOOL DISTRICT
+            '044487', // NEW PHILADELPHIA CITY SCHOOL DISTRICT
+            '045542', // NEWCOMERSTOWN EX VILL SCHOOL DISTRICT
+            '045567', // NEWTON FALLS EX VILL SCHOOL DISTRICT
+            '044495', // NILES CITY SCHOOL DISTRICT
+            '048900', // NOBLE LOCAL SCHOOL DISTRICT
+            '050047', // NORDONIA HILLS CITY SCHOOL DISTRICT
+            '044503', // NORTH CANTON CITY SCHOOL DISTRICT
+            '044511', // NORTH COLLEGE HILL CITY SCHOOL DISTRICT
+            '049056', // NORTHERN LOCAL SCHOOL DISTRICT
+            '044552', // NORTON CITY SCHOOL DISTRICT
+            '044560', // NORWALK CITY SCHOOL DISTRICT
+            '044578', // NORWOOD CITY SCHOOL DISTRICT
+            '044594', // OBERLIN CITY SCHOOL DISTRICT
+            '049379', // OTTAWA-GLANDORF LOCAL SCHOOL DISTRICT
+            '049510', // PAINT VALLEY LOCAL SCHOOL DISTRICT
+            '049395', // PANDORA-GILBOA LOCAL SCHOOL DISTRICT
+            '047597', // PATRICK HENRY LOCAL SCHOOL DISTRICT
+            '048421', // PLEASANT LOCAL SCHOOL DISTRICT
+            '048348', // POLAND LOCAL SCHOOL DISTRICT
+            '044644', // PIQUA CITY SCHOOL DISTRICT
+            '044669', // PORTSMOUTH CITY SCHOOL DISTRICT
+            '044677', // PRINCETON CITY SCHOOL DISTRICT
+            '046508', // BUCKEYE CENTRAL LOCAL SCHOOL DISTRICT
+            '048876', // TRI-VALLEY LOCAL SCHOOL DISTRICT
+            '047308', // ROLLING HILLS LOCAL SCHOOL DISTRICT
+            '046474', // RIDGEWOOD LOCAL SCHOOL DISTRICT
+            '048439', // RIDGEDALE LOCAL SCHOOL DISTRICT
+            '047506', // RIDGEMONT LOCAL SCHOOL DISTRICT
+            '046482', // RIVER VIEW LOCAL SCHOOL DISTRICT
+            '047514', // RIVERDALE LOCAL SCHOOL DISTRICT
+            '046599', // RICHMOND HEIGHTS LOCAL SCHOOL DISTRICT
+            '046011', // UNION LOCAL SCHOOL DISTRICT
+            '049536', // UNION-SCIOTO LOCAL SCHOOL DISTRICT
+            '044719', // ST BERNARD-ELMWOOD PLACE CITY SCHOOL DISTRICT
+            '045997', // ST. CLAIRSVILLE-RICHLAND CITY SCHOOL DISTRICT
+            '044735', // SALEM CITY SCHOOL DISTRICT
+            '044743', // SANDUSKY CITY SCHOOL DISTRICT
+            '049940', // SANDY VALLEY LOCAL SCHOOL DISTRICT
+            '049684', // SENECA EAST LOCAL SCHOOL DISTRICT
+            '044750', // SHAKER HEIGHTS CITY SCHOOL DISTRICT
+            '046003', // SHADYSIDE LOCAL SCHOOL DISTRICT
+            '044768', // SHEFFIELD-SHEFFIELD LAKE CITY SCHOOL DISTRICT
+            '044776', // SHELBY CITY SCHOOL DISTRICT
+            '044784', // SIDNEY CITY SCHOOL DISTRICT
+            '047738', // SOUTH CENTRAL LOCAL SCHOOL DISTRICT
+            '047951', // SOUTH POINT LOCAL SCHOOL DISTRICT
+            '048363', // SOUTH RANGE LOCAL SCHOOL DISTRICT
+            '044800', // SOUTH-WESTERN CITY SCHOOL DISTRICT
+            '048041', // SOUTHWEST LICKING LOCAL SCHOOL DISTRICT
+            '045807', // SPENCERVILLE LOCAL SCHOOL DISTRICT
+            '044818', // SPRINGFIELD CITY SCHOOL DISTRICT
+            '048371', // SPRINGFIELD LOCAL SCHOOL DISTRICT - MAHONING
+            '044826', // STEUBENVILLE CITY SCHOOL DISTRICT
+            '044859', // STRUTHERS CITY SCHOOL DISTRICT
+            '044875', // SYLVANIA CITY SCHOOL DISTRICT
+            '047969', // SYMMES VALLEY LOCAL SCHOOL DISTRICT
+            '046151', // TALAWANDA CITY SCHOOL DISTRICT
+            '044909', // TOLEDO CITY SCHOOL DISTRICT
+            '044917', // TORONTO CITY SCHOOL DISTRICT
+            '048694', // TROTWOOD-MADISON CITY SCHOOL DISTRICT
+            '045922', // TRIMBLE LOCAL SCHOOL DISTRICT
+            '050070', // TWINSBURG CITY SCHOOL DISTRICT
+            '044933', // UPPER ARLINGTON CITY SCHOOL DISTRICT
+            '047522', // UPPER SCIOTO VALLEY LOCAL SCHOOL DISTRICT
+            '046458', // UNITED LOCAL SCHOOL DISTRICT
+            '047464', // VAN BUREN LOCAL SCHOOL DISTRICT
+            '048231', // WASHINGTON LOCAL SCHOOL DISTRICT
+            '049650', // WASHINGTON-NILE LOCAL SCHOOL DISTRICT
+            '049148', // WAVERLY CITY SCHOOL DISTRICT
+            '045641', // WAUSEON EX VILL SCHOOL DISTRICT
+            '049031', // WAYNE TRACE LOCAL SCHOOL DISTRICT
+            '045971', // WAYNESFIELD-GOSHEN LOCAL SCHOOL DISTRICT
+            '045658', // WELLINGTON EX VILL SCHOOL DISTRICT
+            '045021', // WELLSTON CITY SCHOOL DISTRICT
+            '045039', // WELLSVILLE LOCAL SCHOOL DISTRICT
+            '049155', // WESTERN LOCAL SCHOOL DISTRICT
+            '046060', // WESTERN BROWN LOCAL SCHOOL DISTRICT
+            '046359', // WEST CLERMONT LOCAL SCHOOL DISTRICT
+            '047225', // WEST GEAUGA LOCAL SCHOOL DISTRICT
+            '048884', // WEST MUSKINGUM LOCAL SCHOOL DISTRICT
+            '048389', // WEST BRANCH LOCAL SCHOOL DISTRICT
+            '045047', // WESTERVILLE CITY SCHOOL DISTRICT
+            '049577', // WOODMORE LOCAL SCHOOL DISTRICT
+            '049973', // WOODRIDGE LOCAL SCHOOL DISTRICT
+            '045120', // WOOSTER CITY SCHOOL DISTRICT
+            '045138', // WORTHINGTON CITY SCHOOL DISTRICT
+            '045146', // WYOMING CITY SCHOOL DISTRICT
+            '045153', // XENIA COMMUNITY CITY SCHOOL DISTRICT
+            '045674', // YELLOW SPRINGS EX VILL SCHOOL DISTRICT
+            '045161', // YOUNGSTOWN CITY SCHOOL DISTRICT
+            '045179', // ZANESVILLE CITY SCHOOL DISTRICT
         ]);
 
         // Ohio county codes to names mapping
@@ -949,12 +922,20 @@
             requestAnimationFrame(updateCount);
         }
 
+
+        function getDistrictIrn(properties) {
+            const rawIrn = properties ? .irn ? ? properties ? .IRN ? ? '';
+            return String(rawIrn).trim().padStart(6, '0');
+        }
+
+        function isCoalitionMember(featureOrProperties) {
+            const properties = featureOrProperties ? .properties || featureOrProperties || {};
+            return coalitionMemberIRNs.has(getDistrictIrn(properties));
+        }
+
         // Function to determine style based on coalition membership
         function getDistrictStyle(feature) {
-            const name = feature.properties.name || feature.properties.NAME || '';
-            const isMember = Array.from(coalitionMembers).some(member =>
-                name.toUpperCase().includes(member)
-            );
+            const isMember = isCoalitionMember(feature);
 
             if (isMember) {
                 return coalitionStyle;
@@ -969,7 +950,7 @@
 
             // Handle both lowercase (API) and uppercase (file) field names
             const name = properties.name || properties.NAME || 'Unknown District';
-            const irn = properties.irn || properties.IRN || 'N/A';
+            const irn = getDistrictIrn(properties) || 'N/A';
             const countyCode = properties.countycode || properties.CountyCode || properties.COUNTYCODE || '';
             const county = countyNames[countyCode] || `Code: ${countyCode}`;
             const taxId = properties.taxid || properties.TAXID || 'N/A';
@@ -983,9 +964,7 @@
             document.getElementById('districtSearch').value = name;
 
             // Check coalition status
-            const isMember = Array.from(coalitionMembers).some(member =>
-                name.toUpperCase().includes(member)
-            );
+            const isMember = isCoalitionMember(properties);
 
             const statusEl = document.getElementById('coalitionStatus');
             const labelEl = document.getElementById('coalitionLabel');
@@ -1010,7 +989,7 @@
             const name = feature.properties.name || feature.properties.NAME || 'Unknown';
             const countyCode = feature.properties.countycode || feature.properties.CountyCode || feature.properties.COUNTYCODE || '';
             const county = countyNames[countyCode] || '';
-            const irn = feature.properties.irn || feature.properties.IRN || '';
+            const irn = getDistrictIrn(feature.properties);
 
             // Store layer reference for search functionality (using IRN as unique key)
             districtLayers.set(irn, {
@@ -1036,10 +1015,7 @@
                     }
 
                     // Determine if this is a coalition member for correct hover style
-                    const name = feature.properties.name || feature.properties.NAME || '';
-                    const isMember = Array.from(coalitionMembers).some(member =>
-                        name.toUpperCase().includes(member)
-                    );
+                    const isMember = isCoalitionMember(feature);
 
                     layer.setStyle(isMember ? coalitionHoverStyle : hoverStyle);
                     layer.bringToFront();
@@ -1079,10 +1055,15 @@
 
                 // Get counts
                 const featureCount = data.features ? data.features.length : 0;
+                const coalitionCount = data.features ?
+                    data.features.filter(feature =>
+                        coalitionMemberIRNs.has(getDistrictIrn(feature.properties))
+                    ).length :
+                    0;
 
                 // Animate the stat counters
                 animateCount('totalDistricts', featureCount);
-                animateCount('coalitionCount', coalitionMembers.size);
+                animateCount('coalitionCount', coalitionCount);
 
                 // Add GeoJSON layer
                 geojsonLayer = L.geoJSON(data, {
@@ -1094,7 +1075,8 @@
                 map.fitBounds(geojsonLayer.getBounds());
 
                 console.log('✅ Loaded', featureCount, 'school districts');
-                console.log('✅ Coalition members:', coalitionMembers.size);
+                console.log('✅ Coalition members in set:', coalitionMemberIRNs.size);
+                console.log('✅ Coalition members on map:', coalitionCount);
                 if (data.features && data.features[0]) {
                     console.log('Sample district properties:', data.features[0].properties);
                 }
@@ -1142,9 +1124,7 @@
                 const name = props.name || props.NAME || 'Unknown';
                 const countyCode = props.countycode || props.CountyCode || props.COUNTYCODE || '';
                 const county = countyNames[countyCode] || '';
-                const isMember = Array.from(coalitionMembers).some(member =>
-                    name.toUpperCase().includes(member)
-                );
+                const isMember = coalitionMemberIRNs.has(irn);
                 allDistricts.push({
                     irn,
                     name,
@@ -1196,10 +1176,7 @@
                 }
 
                 // Highlight and zoom to selected district
-                const name = feature.properties.name || feature.properties.NAME || '';
-                const isMember = Array.from(coalitionMembers).some(member =>
-                    name.toUpperCase().includes(member)
-                );
+                const isMember = coalitionMemberIRNs.has(irn);
 
                 layer.setStyle(isMember ? coalitionHoverStyle : hoverStyle);
                 layer.bringToFront();
